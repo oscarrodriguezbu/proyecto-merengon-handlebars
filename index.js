@@ -87,6 +87,6 @@ appHeladeria.use((request, response, next)=> {//
 appHeladeria.use('/', router());
 
 //Puerto para el servidor
-appHeladeria.listen(process.env.PUERTO, () =>{
-    console.log(`Servidor corriendo en el puerto ${process.env.PUERTO}`);
+appHeladeria.listen(process.env.PORT, () =>{
+    console.log(`Servidor corriendo en el puerto ${process.env.PORT}`);
 });
