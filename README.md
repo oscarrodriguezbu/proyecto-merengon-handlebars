@@ -23,7 +23,6 @@ Capturas del proyecto
 
 Cosas pendientes, notas y/o ideas:
 
-- Despliegue en Heroku
 
 - Pedir el token para cambio de password
 
@@ -52,7 +51,8 @@ Cosas pendientes, notas y/o ideas:
 Control de versiones:
 
 V2.3.7
-- Algunos cambios en el README.md e intento de subir a Heroku sin exito
+- Algunos cambios en el README.md y package.json para el despliegue en Heroku
+  https://merengon-handlebars-proyect.herokuapp.com/
 
 V2.3.6
 - He puesto a funcionar el subir archivos atraves del trix. Para eso me tocó cambiar el limite de caracteres
