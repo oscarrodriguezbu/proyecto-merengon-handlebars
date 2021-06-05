@@ -51,6 +51,9 @@ Cosas pendientes, notas y/o ideas:
 ---------------------------------------------------------------------------------------------------------------------------------------
 Control de versiones:
 
+V2.3.7
+- Algunos cambios en el README.md e intento de subir a Heroku sin exito
+
 V2.3.6
 - He puesto a funcionar el subir archivos atraves del trix. Para eso me tocó cambiar el limite de caracteres
   en dicho editor de texto en sus respectivas validaciones, ademas de añadir un js dedicado al trix.
