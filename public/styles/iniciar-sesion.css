@@ -1,0 +1,126 @@
+.iniciar-sesion-main {
+    min-height: 50rem;
+    padding: 3rem 0rem 8rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: var(--fondo-img-postres);
+    background-color: var(--color-body); 
+    /* background-color: var(--color-body-rojo-trasparente); */
+}
+
+.formulario__iniciar-sesion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 28rem;
+    /* width: 30%; */
+    margin: 0;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--sombra-suave), 0 8px 16px var(--sombra-suave);
+    padding: 2rem;
+    background: var(--color-blanco);
+}
+
+.formulario__iniciar-sesion input {
+    width: 100%;
+    border: 1px solid var(--color-secundario);
+    border-radius: 0.3rem;
+    height: 2.5rem;
+    line-height: 0.7rem;
+    padding: 0 2rem 0 0.5rem;
+    transition: .3s ease all;
+    font-family: var(--fuente-body);
+}
+
+.formulario__iniciar-sesion input:focus {
+    border: 2px solid var(--color-secundario-hover);
+    outline: none;
+}
+
+.formulario__iniciar-sesion input, .formulario__iniciar-sesion button {
+    margin-bottom: 1rem;
+}
+
+.formulario__iniciar-sesion a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-secundario);
+    transition: .1s ease all;
+    font-size: 0.8rem;
+}
+
+.formulario__iniciar-sesion a:hover {
+    color: var(--color-secundario-hover);
+}
+
+.formulario__iniciar-sesion a:active {
+    transform: translateY(0.1rem);
+}
+
+.formulario-iniciar-sesion__btn {
+    height: 3rem;
+    width: 100%;
+    background: var(--color-secundario);
+    color: var(--color-blanco);
+    font-weight: bold;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: .1s ease all;
+    min-width: 30%;
+    font-size: 1.5rem;
+}
+
+.formulario-iniciar-sesion__btn:hover {
+    transform: scale(1.03);
+}
+
+.formulario-iniciar-sesion__btn:active {
+    box-shadow: 0.1rem 0.1rem 0.55rem var(--color-secundario-hover);
+    transform: translateY(0.3rem);
+}
+
+.formulario-iniciar-sesion .ordenar-btn {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.formulario-iniciar-sesion__grupo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .iniciar-sesion-main {
+/*         min-height: 20rem;
+ */    
+    }
+    .formulario__iniciar-sesion {
+        width: 20rem;
+    }
+    .formulario__iniciar-sesion input {
+        width: 100%;
+        height: 2rem;
+        line-height: 0.6rem;
+        font-size: 0.7rem;
+    }
+    .formulario__iniciar-sesion input, .formulario__iniciar-sesion button {
+        margin-bottom: 1rem;
+    }
+    .formulario__iniciar-sesion a {
+        font-size: 0.6rem;
+    }
+    .formulario-iniciar-sesion__btn {
+        height: 2.5rem;
+        font-size: 0.8rem;
+    }
+}

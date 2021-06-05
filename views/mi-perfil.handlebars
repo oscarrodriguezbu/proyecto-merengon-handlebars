@@ -1,0 +1,74 @@
+<main class="main_mi-perfil">
+
+    <div class="mi-perfil__encabezado">
+        <div class="contenedor-img-perfil">
+            <!-- El modal está en un partials en el layout principal -->
+            {{#if usuario.imagen}}
+            <div class="circular">
+                <img id="myImg" src="/uploads/perfiles/{{usuario.imagen}}" class="admin-perfil" {{!-- alt="profilePicture" --}}>
+            </div>            
+            {{else}}
+            <div class="circular">
+                <i class="fas fa-user-circle"></i>
+            </div>
+
+            {{/if}}
+            <div class="mi-perfil__descripcion">
+                <h2 class="border-white">{{nombreUsuarioCompleto}} </h2>
+                <a href="/editar-perfil" class="mi-perfil__btn mi-perfil__btn__editar-perfil">Editar Perfil</a>
+            </div>
+        </div>
+
+        <div class="mi-perfil__descripcion-mensajes border_top">
+            <p>Crea y administra tus mensajes</p>
+            <a href="/contacto/mensaje" class="mi-perfil__btn mi-perfil__btn__editar-perfil">
+                <span>Nuevo mensaje</span>
+                <div class="boton-circular">
+                    <span>+</span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="mi-perfil__intermedio">
+        <h3>TUS MENSAJES</h3>
+
+    </div>
+
+
+    {{#if contactos.length}}
+    <div class="mi-perfil__mensajes panel-administracion">
+        {{#each contactos}}
+        <div class="mi-perfil__mensaje">
+            <div class="cuerpo-mensaje">
+                <h3>{{titulo}}</h3>
+                <p class="">{{asunto}}</p>
+                <div class="caja-fecha">
+                    <p class="">
+                        {{#dateFormat fecha}}
+                        {{/dateFormat}}
+                    </p>
+                </div>
+            </div>
+            <div class="btns-mensaje">
+               {{!--  <a href="/candidatos/{{id}}" class="mi-perfil__btn"><i class="fas fa-search"></i></a> --}}
+                <a href="/contacto/{{url}}" class="mi-perfil__btn"><i class="fas fa-search"></i></a>
+                <a href="/contacto/editar/{{url}}" class="mi-perfil__btn"><i class="fas fa-edit"></i></a>
+                <a href="#" class="mi-perfil__btn"><i data-eliminar={{id}} class="fas fa-trash-alt"></i></a> {{!-- se
+                usa el axios
+                para eliminar el bloque--}}{{!-- en este caso, me tocó colocar data-eliminar en el i para que el valor
+                sea detectado en el url en el app.js--}}
+            </div>
+        </div>         
+        {{/each}}
+    </div>
+    {{else}}
+
+    <div class="mi-perfil__sin-mensajes">
+        <h2>No tienes mensajes para mostrar. Crea uno!</h2>
+        <img src="img/fondo/faye.png" alt="Ups">
+    </div>
+    {{/if}}
+
+</main>

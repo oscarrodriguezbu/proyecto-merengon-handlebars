@@ -1,0 +1,92 @@
+<main class="main_contacto_mensaje">
+
+    <div class="contenedor__contacto_mensaje">
+        <form name="formulario" action="/contacto/editar/{{contacto.url}}" method="POST" class="formulario"
+            id="formulario">
+
+            <h2 class="formulario__texto border-white">Editar mensaje </h2>
+            <!-- Grupo: Título -->
+            <div class="formulario__grupo" id="grupo__titulo">
+                <label for="titulo" class="formulario__label">Título</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="titulo" id="titulo" placeholder="Unpa Jote"
+                        value="{{contacto.titulo}}">
+                    <i class="formulario__validacion-estado far fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El título tiene que ser de 2 a 18 caracteres.</p>
+            </div>           
+
+            <!-- Grupo: Asunto -->
+            <div class="formulario__grupo" id="grupo__asunto">
+
+                <label for="asunto" class="formulario__label">Asunto</label>
+
+                <select name="asunto" id="asunto" class="formulario__input">
+                    {{#asuntoSeleccionado contacto.asunto}}
+                    <option value="disabled selected">-- Selecciona --</option>
+                    <option value="Agradecimiento">Agradecimiento</option>
+                    <option value="Servicio al cliente">Servicio al cliente</option>
+                    <option value="PQR">Peticiones, quejas o reclamos</option>
+                    <option value="Otro">Otro</option>
+                    {{/asuntoSeleccionado}}
+                </select>
+
+
+                <p class="formulario__input-error">Por favor selecciona una de las opciones</p>
+            </div>
+
+            <!-- Grupo: Mensaje -->
+            <div class="formulario__grupo formulario__grupo__mensaje" id="grupo__mensaje">
+
+                <label for="mensaje" class="formulario__label">Mensaje</label>
+
+                <input type="hidden" id="mensaje" name="mensaje" class="trix-content" value="{{contacto.mensaje}}">
+                <trix-editor id="trix-editor" class="formulario__trix trix-content" input="mensaje"></trix-editor>
+
+                <p class="formulario__input-error">No hay ningún mensaje o es demasiado largo</p>
+            </div>
+
+            <div class="formulario__grupo__listas">
+                <label for="etiquetas_label" class="formulario__label">Temas relacionados</label>
+                <ul class="formulario__lista__etiquetas">
+                    {{#seleccionarEtiqueta contacto.etiquetas}} {{!-- trae etiquetas de la base de datos y la envia al helper --}}
+                    {{/seleccionarEtiqueta}}
+                </ul>
+            </div>
+
+            <!-- Grupo: estrellas -->
+
+            <div class="formulario__rating">
+                <h3 class="etiquetas_label">Evaluanos</h3>
+
+                <div class="formulario__rating__contenedor">
+                    <div class="star-widget" id="widget">
+                        {{>rating}}                      
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Grupo: mensaje comprobacion -->
+
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                    correctamente.
+                </p>
+            </div>
+
+            <!-- Grupo: Boton -->
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <input type="hidden" name="etiquetas" id="etiquetas">
+                <input type="hidden" name="rating" id="rating">
+
+                <button type="submit" class="formulario__btn" id="boton">Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!
+                </p>
+            </div>
+
+        </form>
+    </div>
+
+
+</main>

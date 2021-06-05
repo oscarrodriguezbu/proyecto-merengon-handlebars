@@ -1,0 +1,74 @@
+<main class="main_contacto">
+    <div class="contacto">
+
+        <div class="contacto__contenedor">
+            <div class="contenedor_titulo">
+
+                <div class="contacto__contenedor__encabezado">
+                    <h2 class="etiqueta fix-texto-largo border-white">{{contacto.titulo}} </h2>
+                    <p class="nombre">{{fecha}} </p>
+                </div>
+                {{#if mostrarBoton}}
+                <a href="/contacto/editar/{{contacto.url}}" class="opiniones__btn">Editar</a>
+                {{/if}}
+            </div>
+
+            <div class="contacto__contenedor-grid">
+
+                <div class="sidebar">
+                    <div class="contacto__seccion1">
+                        {{#if contacto.author.imagen}}
+                        <div class="cuadro-imagen">
+                            <img id="myImg" src="/uploads/perfiles/{{contacto.author.imagen}}" class="admin-perfil">
+                        </div>
+
+                        {{else}}
+                        <div class="circular">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+
+                        {{/if}}
+
+                    </div>
+                    <div class="contacto__caja contacto__seccion3">
+                        <p class="etiqueta">Calificaci&#243n</p>
+                        <p class="nombre "><i class="fas fa-star estrella"></i> {{contacto.rating}} de 5</i> </p>
+                    </div>
+                    <div class="contacto__caja contacto__seccion2">
+                        <p class="etiqueta">Asunto</p>
+                        <p class="nombre">{{contacto.asunto}}</p>
+                    </div>
+                    <div class="contacto__caja contacto__seccion5"> {{!-- --}}
+                        <h2 class="etiqueta">Etiquetas seleccionadas</h2>
+                        <ul class="nombre">
+                            {{#each contacto.etiquetas}}
+                            <li><img src="/img/fondo/descarga.png" alt="">{{this}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    
+                </div>
+
+
+                <div class="contacto__caja contacto__seccion4">
+                   {{!--  <h2 class="etiqueta">Mensaje</h2> --}}
+
+                    <div class="nombre trixImagen trix-content">
+                        <span class="fix-texto-largo trixImagen trix-content"> {{{contacto.mensaje}}}</span> {{!-- doble
+                        llave es handlebars y triple es html --}}
+                    </div>
+                    <div class="contacto__caja contacto__seccion6">
+
+                        <p class="nombre">Atte. {{contacto.author.nombre}}</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+</main>

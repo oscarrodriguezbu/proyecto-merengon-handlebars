@@ -1,0 +1,109 @@
+<main class="home">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg__arriba">
+        <path fill="#AC475C" fill-opacity="1"
+            d="M0,96L48,85.3C96,75,192,53,288,48C384,43,480,53,576,80C672,107,768,149,864,170.7C960,192,1056,192,1152,170.7C1248,149,1344,107,1392,85.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+        </path>
+    </svg>
+
+    <div class="contenedor_home">
+        <div class="contenedor">
+            <div class="contenedor__seccion1">
+                <h2 class="border-white">Bienvenidos a </h2>
+                <h1 class="border-white">{{nombrePagina}}</h1>
+            </div>
+            {{!-- Carrusel--}}
+            <div class="contenedor__seccion2" id="homeCarrusel">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext"></div>
+                        <div class="">
+                            <img src="/img/fondo/helado.png" alt="Imagen Nosotros">
+                        </div>
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"></div>
+                        <div class="">
+                            <img src="/img/fondo/carrousle.png" alt="Imagen Nosotros">
+                        </div>
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"></div>
+                        <div class="">
+                            <img src="/img/fondo/carrousle2.jpg" alt="Imagen Nosotros">
+                        </div>
+                        <div class="text"></div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"></div>
+                        <div class="">
+                            <img src="/img/fondo/carrousle3.jpg" alt="Imagen Nosotros">
+                        </div>
+                        <div class="text"></div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <div style="text-align:center">
+                    <span class="punto-carrusel" onclick="currentSlide(1)"></span>
+                    <span class="punto-carrusel" onclick="currentSlide(2)"></span>
+                    <span class="punto-carrusel" onclick="currentSlide(3)"></span>
+                    <span class="punto-carrusel" onclick="currentSlide(4)"></span>
+                </div>
+
+            </div>
+            {{!-- Solo por usar el helper aunque no era necesario --}}
+            <div class="contenedor__seccion3 ">
+                <h3>Postres y Helados Destacados</h3>
+            </div>
+
+            <div class=" contenedor__seccion4 ">
+                <div class="contenedor__segmento contenedor__segmento_color-uno a">
+                    <a href="#"> <img src="/img/POSTRES/1b.png"></a>
+                    {{!-- <h6>&dollar;8.500</h6> --}}
+                    <p>{{helado1}}</p>
+                </div>
+                <div class="contenedor__segmento contenedor__segmento_color-dos b">
+                    <a href="#"><img src="/img/POSTRES/2.png "></a>
+                    {{!-- <h6>&dollar;10.000</h6> --}}
+                    <p>{{helado3}}</p>
+                </div>
+                <div class="contenedor__segmento contenedor__segmento_color-dos c">
+                    <a href="#"> <img src="/img/POSTRES/db.png "></a>
+                    {{!-- <h6>&dollar;10.000</h6> --}}
+                    <p>{{helado4}}</p>
+                </div>
+                <div class="contenedor__segmento contenedor__segmento_color-uno d">
+                    <a href="#"><img src="/img/POSTRES/3.png "></a>
+                    {{!-- <h6>&dollar;8.500</h6> --}}
+                    <p>{{helado2}}</p>
+                </div>
+            </div>
+
+            <nav class="contenedor__seccion5">
+                <a class="boton boton__uno" href="#">VER M&Aacute;S <i class="fas fa-angle-right"></i></i></a>
+            </nav>
+        </div>
+
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svg__abajo">
+        <path fill="#fb6376" fill-opacity="1"
+            d="M0,96L48,85.3C96,75,192,53,288,48C384,43,480,53,576,80C672,107,768,149,864,170.7C960,192,1056,192,1152,170.7C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+    <div class="contenedor__seccion6">
+        <a class="boton boton__dos" href="/crear-cuenta"><img src="/img/fondo/tijeras.png ">Suscribase con
+            {{nombrePagina}}</a>
+
+    </div>
+
+
+
+</main>

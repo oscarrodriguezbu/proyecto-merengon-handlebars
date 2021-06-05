@@ -1,0 +1,79 @@
+<main class="main_opiniones">
+    <div class="opiniones">
+
+        <div class="opiniones__contenedor">
+            <h2 class="border-white">Opiniones y mensajes </h2>
+
+
+            {{#if contactos.length}}
+            <table id="myTable" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th class="casilla-oculta">Fecha</th>
+                        <th class="usuario">Usuario</th>
+                        {{!-- <th>Asunto</th> --}}
+                        <th class="calificacion">Calificaci&#243n</th>
+                        <th> <i class="fas fa-search lupa"></i> </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {{#each contactos}}
+
+                    <tr>
+                        <td class="opiniones__caja casilla-oculta">
+                            <p> {{#dateFormat fecha}}
+                                {{/dateFormat}}
+                            </p>
+                        </td>
+                        <td class="tabla_usuario">
+                            {{#if author.imagen}}
+                           <div class="circular">
+                                <img {{!-- id="myImg" --}} src="/uploads/perfiles/{{author.imagen}}" class="admin-perfil">
+                           </div>
+                            {{else}}
+                            <div class="circular">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+
+                            {{/if}}
+                            <div class="texto_usuario">
+                                <h4 class="fix-texto-largo ">{{author.nombre}} </h4>
+                                <p>{{asunto}}</p>
+                                <p class="fecha"> {{#dateFormatDos fecha}}
+                                    {{/dateFormatDos}}
+                                </p>
+                            </div>
+                        </td>
+                        {{!-- <td>
+
+                        </td> --}}
+                        <td>
+                            <div class="opiniones__caja">
+                                <p class="nombre "><i class="fas fa-star estrella"></i> {{rating}} de 5</i> </p>
+                            </div>
+                        </td>
+                        <td>
+                            <a href="/contacto/{{url}}" class="opiniones__btn"> M&#225s Info </a>
+                        </td>
+
+                    </tr>
+                    {{/each}}
+
+                </tbody>
+
+            </table>
+            {{else}}
+            <div class="opiniones__caja sin__opiniones">
+
+                <img src="../img/fondo/xd.png" alt="">
+                <p class="nombre ">Aún no hay opiniones!</p>
+            </div>
+
+            {{/if}}
+
+        </div>
+    </div>
+
+</main>

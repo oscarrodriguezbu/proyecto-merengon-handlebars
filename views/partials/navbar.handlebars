@@ -1,0 +1,100 @@
+<header class="header navbar" id="header_menu"> {{!-- acá estuve expirmentando colocar botonoes activos con las clases:
+    header_boton-activo header_boton-seleccionado--}}
+    <section class="header__seccion1">
+        <p>
+            <img src="/img/Iconos/2x/baseline_where_to_vote_white_18dp.png">
+            Centro Comercial San Juan Plaza Local 315 &#124; Calle 50 #18-23 Álamos Norte<br>
+            <img src="/img/Iconos/2x/baseline_call_white_18dp.png"> +(057) 320 888 5012
+        </p>
+    </section>
+    {{!-- Menu desplegable responsive --}}
+    <section class="header__seccion2">
+        <div class="header__seccion3-mq">
+            <button id="btn-menu-barras" class="btn-menu-barras">
+                <i class="fas fa-bars"></i></button>
+            <nav class="contenedor-enlaces-nav">
+                <a class="" href="/">Inicio</a>
+                <a class="" href="#">Nosotros</a>
+                <a class=" " href="#">Men&#250;</a>
+                <a class="" href="/contacto/mensaje">Contactenos</a>
+                <a class="" href="/contacto/opiniones">Opiniones</a>
+                {{#if cerrarSesion}}
+                <div class="btn-perfil-usuaro header__pagina_actual">
+                    <a {{!-- href="#" --}} id="btn-perfil-usuaro-responsive" class="btn-perfil-usuaro-responsive">
+                        <span class="btn-perfil-usuaro-responsive">{{nombreUsuario}}</span>
+                        <i class="fas fa-caret-right btn-perfil-usuaro-responsive"></i>
+                    </a>
+
+                    <div class="categorias {{!-- animate__animated animate__backInLeft --}}" id="categoria-perfil-responsive">
+                        <a class="" data-categoria="perfil" href="/mi-perfil">
+
+                            {{#if usuario.imagen}}
+                            <div class="circular ">
+                                <img src="/uploads/perfiles/{{usuario.imagen}}" class="admin-perfil">
+                            </div>
+                            {{else}}
+                            <div class="circular ">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            {{/if}} {{!-- --}}
+                            <span class=" ">Mi perfil</span>
+                        </a>
+                        <a class=" " data-categoria="perfil" href="/cerrar-sesion">Cerrar sesión</a>
+                    </div>
+                </div>
+
+
+
+                {{else}}
+                <a class="header__pagina_actual" href="/iniciar-sesion">Iniciar sesión</a>
+                {{/if}}
+            </nav>
+        </div>
+        <div class="iconoFacebook">
+            <a target="_blank" href="https://www.facebook.com/ElMerengonNeiva/">
+                <img src="/img/Iconos/2x/facebook.png" alt="facebook">
+            </a>
+        </div>
+    </section>
+    {{!-- Menu pantalla grande --}}
+    <nav class="header__seccion3">
+        <a class="header__pagina_actual" href="/">Inicio</a>
+        <a class="header__pagina_actual">Nosotros</a>
+        <a class="header__pagina_actual">Men&#250;</a>
+    </nav>
+    <a href="#" class="header__seccion4"><img src="/img/LogocutPeque.png"></a>
+    <nav class="header__seccion5">
+        <a class="header__pagina_actual" href="/contacto/mensaje">Contactenos</a>
+        <a class="header__pagina_actual" href="/contacto/opiniones">Opiniones</a>
+        {{#if cerrarSesion}}
+        <div class="btn-perfil-usuaro header__pagina_actual">
+            <a id="btn-perfil-usuaro"{{!--  href="#" --}}>
+                <span id="btn-perfil-usuaro-span">{{nombreUsuario}}</span>
+                <i id="btn-perfil-usuaro-icono" class="fas fa-caret-down"></i>
+            </a>
+
+            <div class="categorias" id="categoria-perfil">
+                <a class="dropdown-item" data-categoria="perfil" href="/mi-perfil">
+                    {{#if usuario.imagen}}
+                    <div class="circular">
+                        <img src="/uploads/perfiles/{{usuario.imagen}}" class="admin-perfil">
+                    </div>
+                    {{else}}
+                    <div class="circular">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    {{/if}}{{!-- --}}
+                    <span>Mi perfil</span>
+                </a>
+                <a class="dropdown-item" data-categoria="perfil" href="/cerrar-sesion">Cerrar sesión</a>
+            </div>
+        </div>
+
+
+
+        {{else}}
+        <a class="header__pagina_actual" href="/iniciar-sesion">Iniciar sesión</a>
+        {{/if}}
+
+    </nav>
+</header>

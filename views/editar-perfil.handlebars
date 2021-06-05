@@ -1,0 +1,54 @@
+<main class="main_editar-usuario">
+
+    <form action="/editar-perfil" method="post" class="formulario-editar-usuario" enctype="multipart/form-data">
+        <h2 class="editar-usuario__texto ">Editar perfil: </h2>
+
+        <div class="formulario-editar-usuario__grupo">
+
+            <input type="text" value="{{usuario.nombre}}" name="nombre" class="formulario-editar-usuario__input"
+                placeholder="Tu Nombre">
+        </div>
+
+        <div class="formulario-editar-usuario__grupo">
+
+            <input type="text" value="{{usuario.email}}" name="email" class="formulario-editar-usuario__input"
+                placeholder="Tu E-mail">
+        </div>
+
+        <div class="formulario-editar-usuario__grupo">
+
+            <input type="password" name="password" class="formulario-editar-usuario__input" placeholder="Tu Password">
+        </div>
+
+        <div class="formulario-editar-usuario__grupo">
+
+            <input type="password" name="confirmar" class="formulario-editar-usuario__input"
+                placeholder="Confirmar password">
+        </div>
+
+        
+        <div class="formulario-editar-usuario__grupo grupo-subir-imagen">
+           
+
+            <div class="subirImagen">
+                <label>Subir foto:</label>
+                <input type="file" name="imagen">
+            </div>
+             {{#if usuario.imagen}}
+            <div class="cuadro-imagen">
+                <img id="myImg" src="/uploads/perfiles/{{usuario.imagen}}" class="admin-perfil">
+            </div>
+
+            {{else}}
+            <div class="circular">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            {{/if}}
+        </div>
+
+        <button type="submit" class="formulario-editar-usuario__btn">Guardar cambios</button>
+        <br>
+
+    </form>
+
+</main>

@@ -1,0 +1,45 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "Desarrollo del proyecto del curso",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index",
+    "start": "concurrently \"npm run dev\" \"npm run watch\"",
+    "watch": "webpack --w --mode development"
+  },
+  "author": "Oscar Leonardo Rodriguez Bustos",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.0.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.2.2",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^5.3.0",
+    "fs-extra": "^10.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.15",
+    "multer": "^1.4.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "shortid": "^2.2.16",
+    "slug": "^4.0.3",
+    "sweetalert2": "^11.0.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.4",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}

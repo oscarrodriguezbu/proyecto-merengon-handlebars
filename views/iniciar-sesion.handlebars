@@ -1,0 +1,14 @@
+<main class="iniciar-sesion-main">
+
+    
+    
+    <form action="/iniciar-sesion" method="post" class="formulario__iniciar-sesion" >
+
+        <input type="email" name="email" placeholder="Correo electrónico" > {{!-- los inputs tenian required pero se los quite para observar los mensajes de error --}}
+        <input type="password" name="password" placeholder="Contraseña"  >    
+        <button type="submit" class="formulario-iniciar-sesion__btn">Entrar</button>
+        <a href="/restablecer-password">¿Has olvidado la contraseña?</a>
+        <a href="/crear-cuenta">Crear cuenta</a>
+
+    </form>
+</main>

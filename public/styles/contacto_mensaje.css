@@ -1,0 +1,516 @@
+.main_contacto_mensaje {
+	background-color: var(--color-body-rojo-trasparente);    
+    background-image: var(--fondo-img-postres);
+	display: flex;
+	justify-content: center;
+/* 	width: 100%;
+ */}
+
+
+.contenedor__contacto_mensaje {    
+		
+padding: 4rem 0rem 8rem 0rem;	
+background-color:var(--color-body);
+display: flex;
+justify-content: center;
+align-items: center;
+color: var(--color-secundario);
+font-family: var(--fuente-primario); 
+width: 50%;
+
+   
+}
+
+.formulario__texto {
+font-size: 3rem;
+margin: 0;   
+font-weight: lighter;
+margin-bottom: 1.5rem;
+
+}
+
+.formulario {     
+	display: grid;
+	grid-template-columns: 1fr 1fr; 
+	gap: 1.5rem;
+	width: 80%;
+	
+	
+	
+}
+
+.formulario__label {
+	display: block;    
+	font-weight: 700;
+	padding: 0.5rem;
+	font-size: 1.1rem;
+}
+
+.formulario__grupo-input {
+	position:relative;
+}
+
+.formulario__input {
+	width: 100%;
+	background: var(--color-blanco);
+	border: 0.15rem dashed var(--color-secundario);
+	border-radius: 0.3rem;
+	height: 2.5rem;
+	line-height: 0.7rem;
+	padding: 0 2rem 0 0.5rem;
+	transition: .3s ease all;
+    font-family: var(--fuente-body);
+
+	
+   
+}
+/* .select  {
+	position: relative;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+  }
+ .select:before {
+	content: '\f0d7';
+	font-family: 'FontAwesome';
+	color: red;
+	display: inline-block;
+	position: absolute;
+	right: -5px;
+	top: 5px;
+	pointer-events: none;
+	z-index: 1;
+  } */
+
+ /*  .main_contacto_mensaje select option:hover {
+	background: #ff9500 -webkit-linear-gradient(bottom, #ff9500 0%, #ff9500 100%);
+	color: #fff;
+  }
+ */
+.formulario__input, .formulario__input-error,  trix-editor  {  
+	font-size: 0.8rem;	
+}
+
+.formulario__mensaje p, .formulario__mensaje-exito .formulario__input-error {  
+	font-size: 0.7rem;	
+}
+
+
+.main_contacto_mensaje .trix-content img {
+    max-width: 40%;
+    height: auto;
+}
+
+.formulario__input:focus {
+	border: 3px solid var(--color-secundario-hover);
+	outline: none;
+	box-shadow: 0rem 0px 0.5rem rgba(172,71,92, 0.4);
+}
+
+.formulario__input-error {   /* ------------------ */
+	
+	margin-bottom: 0;
+	color: var(--color-secundario);
+	font-family: var(--fuente-body);
+	display: none;
+}
+
+.formulario__input-error-activo {  /* ------------------ */
+	display: block;
+}
+
+.formulario__validacion-estado { /* ------------------ */
+	position: absolute;
+	right: 0.7rem;
+	bottom: 0.8rem;
+	z-index: 100;
+	font-size: 1rem;
+	opacity: 0;
+}
+
+.formulario__grupo__mensaje,
+.formulario__texto,
+.formulario__mensaje,
+.formulario__grupo__listas, 
+.formulario__rating,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {   /* ------------------ */
+	height: 45px;
+	line-height: 45px;
+	background: var(--color-incorrecto);
+	padding: 0 15px;
+	border-radius: 3px;
+	
+	display: none;
+}
+
+.formulario__mensaje-activo {  /* ------------------ */
+	display: block;
+}
+
+
+.formulario__mensaje p {
+	margin: 0;	
+	font-family: var(--fuente-body);
+	text-align: center;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn {
+	height: 4rem;
+	width: 30%;
+	background: var(--color-secundario);
+	color: var(--color-blanco);
+	font-weight: bold;
+	border: none;
+	border-radius: 0.3rem;
+	cursor: pointer;
+	transition: .1s ease all;	
+	min-width: 50%;
+	font-size: 2rem;
+}
+
+.formulario__btn:hover {     
+    transform: scale(1.03);
+}
+
+.formulario__btn:active{  
+    box-shadow: 0.1rem 0.1rem 0.55rem var(--color-secundario-hover);
+    transform: translateY(0.3rem);
+}
+
+.formulario__mensaje-exito {  /* ------------------ */
+	height: 45px;
+	line-height: 45px;	
+	padding: 0 15px;	
+	
+	font-weight: 700;
+	font-family: var(--fuente-body);
+	color: #119200;
+	display: none;	
+}
+
+.formulario__mensaje-exito-activo {  /* ------------------ */
+	display: block;
+}
+
+trix-toolbar, 
+trix-editor {
+    background-color: white;
+	font-family: var(--fuente-body);
+	/* min-height: 7em; */
+	
+   
+}
+trix-toolbar {
+    padding: 2% 0  2% 0;
+	background-color: var(--color-body);
+	justify-content: space-between;
+	
+	
+}
+trix-editor {        
+	min-height: 8rem;
+	padding: 1rem;
+	border: 0.2rem dashed var(--color-secundario);
+}
+trix-editor h1, 
+trix-editor blockquote {
+    color: black;
+}
+trix-toolbar .trix-button-group {
+    margin-bottom: 0;
+}
+trix-toolbar .trix-button--icon-strike {
+    display: block;
+}
+
+trix-toolbar .trix-button--icon {
+    font-size: 0.92vw;    /* vw para texto responsive  */
+}
+
+/* trix cosas nuevas para subir archivos 
+fuente: https://github.com/basecamp/trix/issues/594
+
+pero no funciona, debo tener algo mal por eso he comentado todo lo relacionado
+*/
+
+/* .trix-button--icon-attach::before {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItdXBsb2FkLWNsb3VkIj48cG9seWxpbmUgcG9pbnRzPSIxNiAxNiAxMiAxMiA4IDE2Ij48L3BvbHlsaW5lPjxsaW5lIHgxPSIxMiIgeTE9IjEyIiB4Mj0iMTIiIHkyPSIyMSI+PC9saW5lPjxwYXRoIGQ9Ik0yMC4zOSAxOC4zOUE1IDUgMCAwIDAgMTggOWgtMS4yNkE4IDggMCAxIDAgMyAxNi4zIj48L3BhdGg+PHBvbHlsaW5lIHBvaW50cz0iMTYgMTYgMTIgMTIgOCAxNiI+PC9wb2x5bGluZT48L3N2Zz4=);
+}
+
+.trix-preview-file {
+	border: 1px solid red;
+  }
+  
+  .trix-preview-video {
+	border: 1px solid yellow;
+  }
+  
+  .trix-preview-image {
+	border: 1px solid green;
+  } */
+
+/* -------- */
+
+.formulario__grupo__listas ul {
+	display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-gap: 1rem;
+	list-style: none;
+	padding: 0;
+}
+
+.formulario__lista__etiquetas  li {	
+    border: 0.2rem solid var(--color-secundario);    
+    font-weight: 600;
+    font-size: 0.91vw;	
+	font-family: var(--fuente-body);
+	padding: 0.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    height: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+   
+}
+.formulario__lista__etiquetas  li.activo {
+    background-color: var(--color-secundario-hover);
+	color: var(--color-body);
+}
+.formulario__lista__etiquetas  li:hover {
+    cursor: pointer;
+}
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: var(--color-correcto);
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: var(--color-incorrecto);
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: var(--color-incorrecto);
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input, .formulario__grupo-incorrecto .formulario__trix {
+	border: 3px solid var(--color-incorrecto);
+}
+
+
+
+/* ---------------------------estrellas------------- */
+.formulario__rating{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	/* background-color: var(--color-body-oscuro); */
+	
+	/* border: 0.3rem dashed var(--color-primario); */
+	
+	margin-bottom: 2rem;
+  }
+
+
+  .formulario__rating__contenedor{
+	margin-top: 2%;
+	background-color: var(--color-body-oscuro);
+	border-radius: 2rem;
+	padding: 2%;
+	
+  }
+  .formulario__rating h3{
+	margin: 0;	
+  }
+ .star-widget input{
+	display: none;
+  }
+  .star-widget label{
+	font-size: 1.5vw;
+	color: var(--color-secundario-hover);
+	padding: 10px;
+	float: right;
+	transition: all 0.2s ease;
+  }
+  input:not(:checked) ~ label:hover,
+  input:not(:checked) ~ label:hover ~ label{
+	color: #fd4;
+  }
+  input:checked ~ label{
+	color: #fd4;
+  }
+  input#rate-5:checked ~ label{
+	color: #fe7;
+	text-shadow: 0 0 20px #952;
+  }
+  #rate-1:checked ~ div:before{ /* ~ es para apuntar al hijo de ese checked, en este caso en ese div se coloca el content */
+	content: "Es horrible 😠";
+  }
+  #rate-2:checked ~ div:before{
+	content: "No me gusta😒";
+  }
+  #rate-3:checked ~ div:before{
+	content: "Me agrada 😄";
+  }
+  #rate-4:checked ~ div:before{
+	content: "Me gusta 😎";
+  }
+  #rate-5:checked ~ div:before{
+	content: "!Me encanta¡ 😍";
+  }
+
+  .widget-texto{
+	width: 100%;
+	font-size: 2vw;
+	/* color: #fe7; */
+	font-weight: 500;	
+	text-align: center;
+	transition: all 0.2s ease;
+  }
+/* ----- -----  Mediaqueries ----- ---------------------------------------------------------------------------------- */
+
+
+/* @media screen and (max-width: 1000px) {
+	.background__contacto {
+		padding: 0rem 15rem 0rem 15rem;
+	}
+	.contenedor__contacto_mensaje {
+		padding: 2rem 4rem 9rem 4rem;  
+	}
+} */
+
+
+@media screen and (max-width: 1171px) {
+	.contenedor__contacto_mensaje {
+		width: 70%;		
+		
+    }
+    trix-toolbar .trix-button--icon {
+		font-size: 1.2vw;
+		
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+    .contenedor__contacto_mensaje {
+		width: 87%;
+		
+		padding: 2rem 0rem 2rem 0rem;	
+    }
+
+   .formulario__label{         
+        font-size: 1rem;
+    }
+    .contenedor__contacto_mensaje h2{         
+        font-size: 2rem;
+		margin-top: 1rem;
+    }  
+	
+    
+	.formulario {
+				
+		/* grid-template-columns: 1fr; */
+        gap: 0.5rem;
+		padding-bottom: 2.5rem;
+		/* display: block; */	
+		width: 80%;
+		
+	}
+
+	.formulario__input, .formulario__input-error,  trix-editor  {  
+		font-size: 0.7rem;	
+	}
+	.formulario__input  {  
+		height: 2rem;
+	}
+
+
+
+	.formulario__mensaje p, .formulario__mensaje-exito {  
+		font-size: 0.8rem;	
+	}
+	
+  /*   .formulario__grupo__mensaje,
+	.formulario__rating,
+    .formulario__mensaje,
+	.formulario__texto,
+	.formulario__grupo__listas,
+	.formulario__grupo-btn-enviar {
+		grid-column: 1;
+	} */
+      
+	.formulario__grupo {
+		grid-column: span 2;
+	}
+
+
+	.formulario__btn {
+		width: 100%;
+		font-size: 1.5rem;	
+	}
+
+    trix-editor {         
+		border: 0.2rem dashed var(--color-secundario);  
+		min-height: 6rem;   		
+		
+    }
+
+	
+	trix-editor {
+   		padding: 0.5rem;	  
+ 	}	 
+
+	 trix-toolbar .trix-button--icon {
+		font-size: 1.6vw;
+		
+	}
+
+	/* trix-toolbar .trix-button--icon::before {
+		font-size: 0.1rem;
+	}
+ */
+
+	.formulario__lista__etiquetas  li {			
+		/* font-size: 1.1vw; */		
+		font-size: 0.5rem;   
+	}
+	.formulario__grupo__listas ul {			
+		grid-gap: 0.2rem;	
+	}	
+
+
+	.formulario__validacion-estado { /* ------------------ */	
+		right: 0.7rem;
+		bottom: 0.5rem;	
+		font-size: 1rem;
+		
+	}
+   
+	.star-widget label{
+		font-size: 1.2rem;		
+	  }
+
+	  .widget-texto{
+		
+		font-size: 1rem;
+	
+	  }
+}
+
+
