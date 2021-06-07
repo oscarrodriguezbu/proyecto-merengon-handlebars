@@ -236,7 +236,10 @@ trix-toolbar .trix-button--icon-strike {
 trix-toolbar .trix-button--icon {
     font-size: 0.92vw;    /* vw para texto responsive  */
 }
-
+.trix-content img{
+    width: 100%;
+    height: 100%;
+}
 /* trix cosas nuevas para subir archivos 
 fuente: https://github.com/basecamp/trix/issues/594
 

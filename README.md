@@ -26,14 +26,16 @@ Cosas pendientes, notas y/o ideas:
 
 - Pedir el token para cambio de password
 
-- Mejorar la vista en responsive design, me basé en la pantalla mas pequeña del google chrome de escritorio pero en mi celu no se ve como me hubiera gustado que quedara
-
 - Validar el trix para evitar palabras relacionadas con activacion de codigo javascript
 
 - Agregar cositas chulas como la pagina 404. Fuente https://bluuweb.github.io/node/20-hbs/#each
 
 - Buscar la manera de hacer funcionar el trix con multer para luego subir los archivos de forma local tal como se trabajó 
   en la subida de la foto de perfil del usuario (Si se puede claro, no hay mucha documentacion al respecto)
+
+- Buscar otra forma de colocar la foto de perfil en los circulos correspondientes para evitar un borde molesto cuando hay un error 
+  y la imagen no se muestra, anteriormente lo intenté colocando un style background en el html pero sin exito, tal vez
+  por propiedades de los handlebars, quizá hay que seguir intentando con algo similar
 
 - si queda tiempo, validar para que cuando el usuario esté iniciado o no, no pueda ir atrás en las vistas pertinentes, debe salir una validacion mas o menos como esta:
   Actualmente ha iniciado sesión como xxxxx necesita salir antes de volver a entrar con un usuario diferente. (cerrar sesion o cancelar)

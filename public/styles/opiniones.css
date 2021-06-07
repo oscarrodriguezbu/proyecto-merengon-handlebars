@@ -148,6 +148,7 @@ esten donde deben estar
     object-fit: cover;
     background-color: var(--sombra-suave);
     /*  margin-right: 3%; */
+    
 }
 
 table.dataTable tbody th, table.dataTable tbody td {
