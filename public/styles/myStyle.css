@@ -296,6 +296,8 @@ body {
 
 .navbar .categorias.circular {
     margin-right: 2%;
+    width: 8rem;
+    height: 8rem;
 }
 
 .navbar .categorias i {

@@ -132,6 +132,8 @@ esten donde deben estar
 
     {
     margin-right: 5%;
+    width: 6rem;
+    height: 6rem;
 }
 
 .main_opiniones .tabla_usuario i {
@@ -524,6 +526,11 @@ table.dataTable thead .sorting_desc {
         float: right;
         text-align: right
     }
+    .main_opiniones .tabla_usuario .circular   {
+    
+    width: 4rem;
+    height: 4rem;
+}
     .main_opiniones .tabla_usuario i {
         font-size: 4rem;
     }
