@@ -1,6 +1,7 @@
 # TRABAJO DE SISTEMAS DISTRIBUIDOS
 ## CONSTRUIDO CON HANDLEBARS, MONGO, NODE, EXPRESS, MULTER, PASSPORT, VALIDATOR, SWEETALERT2, AXIOS, FLASH ETC
 
+Despliegue en Heroku https://merengon-handlebars-proyect.herokuapp.com/
 
 Capturas del proyecto
 
