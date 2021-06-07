@@ -104,6 +104,9 @@
     border-bottom: 3px dashed var(--color-secundario);
 } */
 
+.contacto__contenedor-grid .sidebar{
+    width: 30%;
+}
 .contacto__seccion1 {
     grid-area: contacto__seccion1;
     display: flex;
