@@ -8,7 +8,7 @@ module.exports = {
 
         etiquetas.forEach(etiqueta => {
             html += `
-                <li class="fix-texto-largo" ${seleccionadas.includes(etiqueta) ? 'class="activo"' : ''}>${etiqueta}</li>
+                <li  ${seleccionadas.includes(etiqueta) ? 'class="activo"' : ''}>${etiqueta}</li>
             `;
         });
 
