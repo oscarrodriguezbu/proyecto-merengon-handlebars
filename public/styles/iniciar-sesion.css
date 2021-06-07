@@ -1,11 +1,11 @@
 .iniciar-sesion-main {
-    min-height: 50rem;
+    min-height: 40vw;
     padding: 3rem 0rem 8rem 0rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: var(--fondo-img-postres);
-    background-color: var(--color-body); 
+    background-color: var(--color-body);
     /* background-color: var(--color-body-rojo-trasparente); */
 }
 
@@ -99,10 +99,9 @@
 }
 
 @media screen and (max-width: 768px) {
-
     .iniciar-sesion-main {
-/*         min-height: 20rem;
- */    
+        /*         min-height: 20rem;
+ */
     }
     .formulario__iniciar-sesion {
         width: 20rem;
@@ -123,4 +122,8 @@
         height: 2.5rem;
         font-size: 0.8rem;
     }
+}
+
+@media screen and (max-width: 500px) {
+    
 }

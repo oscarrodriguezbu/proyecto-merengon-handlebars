@@ -82,25 +82,21 @@
     align-items: center;
     padding: 4% 7.5% 4% 7.5%;
     /* width: 100%; */
-   
 }
 
-.main_opiniones .texto_usuario{
+.main_opiniones .texto_usuario {
     /* width: 100%; */
-    
     overflow: hidden;
 }
 
-.texto_usuario  h4{
-  /*  width: min-content; */
+.texto_usuario h4 {
+    /*  width: min-content; */
     /* max-width: 90%; */
     /* white-space:nowrap; */
     /* overflow: hidden;
     text-overflow: ellipsis; */
-   
-  /*  overflow: hidden;
+    /*  overflow: hidden;
     text-overflow: ellipsis; */
-    
     /* word-wrap: break-word; */
 }
 
@@ -131,7 +127,10 @@ esten donde deben estar
     /* width: 100%; */
 }
 
-.main_opiniones .tabla_usuario .circular/* , .main_opiniones .tabla_usuario img */ {
+.main_opiniones .tabla_usuario .circular
+/* , .main_opiniones .tabla_usuario img */
+
+    {
     margin-right: 5%;
 }
 
@@ -154,6 +153,7 @@ esten donde deben estar
 table.dataTable tbody th, table.dataTable tbody td {
     padding: 4%;
 }
+
 td a {
     display: flex;
     justify-content: center;
@@ -462,7 +462,7 @@ table.dataTable thead .sorting_desc {
         width: 50%
     }
      */
-  /*   .main_opiniones  .nombre {
+    /*   .main_opiniones  .nombre {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -529,6 +529,25 @@ table.dataTable thead .sorting_desc {
     .main_opiniones .tabla_usuario img {
         width: 4rem;
         height: 4rem;
+    }
+}
+
+@media screen and (max-width: 524px) {
+    .opiniones__contenedor {
+        width: 90%;
+    }
+    .dataTables_wrapper .dataTables_filter {
+        margin-top: .5em;
+        float: left;
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    .dataTables_wrapper .dataTables_length {
+        margin-right: 0.5rem;
+    }
+    td p {        
+        font-size: 2.3vw;
     }
 }
 

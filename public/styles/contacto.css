@@ -15,7 +15,7 @@
     /* background: var(--color-body-transpartente); */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     color: var(--color-secundario);
     font-family: var(--fuente-primario);

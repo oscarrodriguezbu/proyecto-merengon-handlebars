@@ -1,13 +1,11 @@
 /* crear usuario se iba a compartir con esto pero creo que mejor no */
 
-
 .main_editar-usuario {
-    background-color: var(--color-body-rojo-trasparente);    
+    background-color: var(--color-body-rojo-trasparente);
     background-image: var(--fondo-img-postres);
-  
     display: flex;
     justify-content: center;
-    min-height: 50rem;
+    min-height: 40vw;
     padding: 6rem 0rem 8rem 0rem;
     display: flex;
     justify-content: center;
@@ -50,7 +48,6 @@
     padding: 0 2rem 0 0.5rem;
     transition: .3s ease all;
     font-family: var(--fuente-body);
-    
 }
 
 .formulario-editar-usuario__input:focus {
@@ -104,7 +101,9 @@
     display: flex;
     justify-content: space-around;
 }
+
 /* ---------------------- */
+
 .formulario-editar-usuario .grupo-subir-imagen {
     display: flex;
     justify-content: space-between;
@@ -117,6 +116,7 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 .formulario-editar-usuario__grupo .cuadro-imagen {
     /* width: 10rem; */
 }
@@ -144,33 +144,29 @@
 }
 
 .formulario-editar-usuario__grupo .subirImagen input::-webkit-file-upload-button {
-   display: none;
-   
-    
+    display: none;
 }
 
 .formulario-editar-usuario__grupo .subirImagen label {
-   /*  padding-bottom: 5%; */
+    /*  padding-bottom: 5%; */
     /* color: var(--color-secundario); */
-     
- }
+}
 
 .formulario-editar-usuario__grupo .subirImagen input {
     width: 100%;
     /* height: 100%; */
-     padding: 2%;
-     border: 1px solid var(--sombra-suave);
-     cursor: pointer;
-     text-align: center;
-     border-radius: 0.3rem;
+    padding: 2%;
+    border: 1px solid var(--sombra-suave);
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.3rem;
     font-size: 0.6rem;
     padding: 5%;
     display: inline-block;
     /* color: var(--sombra-suave); */
- }
+}
 
-
- .formulario-editar-usuario__grupo .subirImagen input::before {
+.formulario-editar-usuario__grupo .subirImagen input::before {
     content: 'Selecciona';
     /* width: 100%; */
     display: flex;
@@ -188,17 +184,19 @@
     /* color: var(--color-secundario); */
     font-weight: 600;
     font-size: 1rem;
-  }
-  .formulario-editar-usuario__grupo .subirImagen input:hover {
+}
+
+.formulario-editar-usuario__grupo .subirImagen input:hover {
     /* border-color: black; */
     color: var(--color-secundario-hover);
-  }
-  .formulario-editar-usuario__grupo .subirImagen input:active {
+}
+
+.formulario-editar-usuario__grupo .subirImagen input:active {
     /* background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); */
     transform: translateY(0.3rem);
     border: 2px solid var(--color-secundario-hover);
+}
 
-  }
 /* ----- -----  Mediaqueries ----- ---------------------------------------------------------------------------------- */
 
 @media screen and (max-width: 768px) {
@@ -215,7 +213,6 @@
         height: 2rem;
         line-height: 0.7rem;
     }
-  
     .formulario-editar-usuario__btn {
         height: 2.5rem;
         font-size: 0.8rem;
@@ -224,32 +221,33 @@
     .formulario-editar-usuario a {
         font-size: 0.6rem;
     }
-
     /*  */
-
-    .formulario-editar-usuario__grupo img {       
+    .formulario-editar-usuario__grupo img {
         width: 5rem;
-        height: 5rem;      
+        height: 5rem;
     }
-    
-    .formulario-editar-usuario__grupo i {        
-        font-size: 5rem;       
+    .formulario-editar-usuario__grupo i {
+        font-size: 5rem;
     }
-    
-  
     .formulario-editar-usuario__grupo .subirImagen label {
-      font-size: 0.9rem;
-         
-     }
-    
-    .formulario-editar-usuario__grupo .subirImagen input {      
-        font-size: 0.5rem;                
-     }
-    
-    
-     .formulario-editar-usuario__grupo .subirImagen input::before {       
+        font-size: 0.9rem;
+    }
+    .formulario-editar-usuario__grupo .subirImagen input {
+        font-size: 0.5rem;
+    }
+    .formulario-editar-usuario__grupo .subirImagen input::before {
         font-weight: 600;
         font-size: 0.8rem;
-      }
-     
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main_editar-usuario {
+        padding: 3rem 0rem 5rem 0rem;
+    }
+    .formulario-editar-usuario {
+        gap: 1rem;
+        width: 25rem;
+        margin: 0 1rem 0 1rem;
+    }
 }

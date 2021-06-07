@@ -50,6 +50,9 @@ Cosas pendientes, notas y/o ideas:
 ---------------------------------------------------------------------------------------------------------------------------------------
 Control de versiones:
 
+V2.3.8
+- Version responsive corregida
+
 V2.3.7
 - Algunos cambios en el README.md y package.json para el despliegue en Heroku
   https://merengon-handlebars-proyect.herokuapp.com/
