@@ -514,3 +514,9 @@ pero no funciona, debo tener algo mal por eso he comentado todo lo relacionado
 }
 
 
+@media screen and (max-width: 500px) {
+	.contenedor__contacto_mensaje {
+		width: 100%;		
+		
+    }
+}

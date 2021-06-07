@@ -90,3 +90,15 @@
         font-size: 0.6rem;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .alertas {
+        min-width: 90%;
+    }
+    .alertas img {
+        width: 60px;
+        /*  right: -5%;
+        top: 80%; */
+        top: -15%;
+    }
+}
