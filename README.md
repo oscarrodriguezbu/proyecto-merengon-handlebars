@@ -26,8 +26,6 @@ Cosas pendientes, notas y/o ideas:
 
 - Pedir el token para cambio de password
 
-- Mejorar la vista en responsive design, me basé en la pantalla mas pequeña del google chrome de escritorio pero en mi celu no se ve como me hubiera gustado que quedara
-
 - Validar el trix para evitar palabras relacionadas con activacion de codigo javascript
 
 - Agregar cositas chulas como la pagina 404. Fuente https://bluuweb.github.io/node/20-hbs/#each
